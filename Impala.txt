@@ -1,0 +1,24 @@
+Apache Impala
+
+Softwares de front-end, auxilia acesso a dados,  p/ p/ leitura e gravação, gerenciamento de gde qde dados, hdfs, drive jdbc.
+
+Comandos semelhantes ao Hive.
+
+
+impala-shell
+
+show databases;
+#inicialmente não aparecem os dados do hive, para recurerar tem q invalidar o metastore.
+
+>INVALIDATE METADATA teste01.td_localidade_parquet;
+>use teste01;
+>show tables;
+
+# tem que invalidar tds tabelas para buscar as informações:
+>INVALIDATE METADATA teste01.localidade
+>show tables;
+
+# verificando os dados
+select * from td_localidade_parquet;
+
+
